@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans.springbeans.xsd 
+	http://www.springframework.org/schema/context">
+	<bean id="firstCD" class="soundSystem.ShizuokaCallingVol3"/>
+	<bean id="secondCD" class="soundSystem.GaleryChill" />
+	
+	<bean id="thirdDisc" class="soundSystem.BlankDisc">
+		<constructor-arg value="No Lives Matter"></constructor-arg>
+		<constructor-arg value="chris†††"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>offline</value>
+				<value>judas inside</value>
+				<value>what feeling</value>
+				<value>trudging on emotionless</value>
+				<value>i can't remember his voice</value>
+				<value>ytp death</value>
+				<value>he left</value>
+				<value>emptyness surrounding</value>
+				<value>lying to ourselves</value>
+				<value>esc</value>
+				<value>i am death</value>
+				<value>no end</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="fourthDisc" 
+		  class="soundSystem.BlankDisc"
+		  c:_title="フローラルの専門店"
+		  c:_artist="Macintosh Plus"
+	/>
+	
+	<bean id="fifthDisc"
+		  class="soundSystem.BlankDisc"
+		  c:_0="新しい日の誕生"
+		  c:_1="2814"
+	
+	/>
+	
+	<bean id="compactDiscPlayer" class="soundSystem.CDPlayer" >
+		<constructor-arg ref="firstCD" />
+	</bean>
+	
+	<bean id="alternateCDPlayer" class="soundSystem.CDPlayer" c:_0-ref="secondCD" />
+
+</beans>
