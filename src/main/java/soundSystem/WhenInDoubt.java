@@ -6,8 +6,7 @@ public class WhenInDoubt implements CompactDisc {
 	private String artist = "2562";
 
 	public void play() {
-		// TODO Auto-generated method stub
-
+		System.out.println("Playing " + title + " by " + artist);
 	}
 
 }
